@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIP Course Exemption System</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <div class="login-container" id="login-page">
+        <h1>Login to Course Exemption System</h1>
+        <form id="login-form">
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                <input type="checkbox" id="show-password"> Show Password
+            </div>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <div class="container hidden" id="user-interface">
+        <nav class="navbar">
+            <h2 id="dashboard-btn">Dashboard</h2>
+        </nav>
+        <div id="user-dashboard" class="hidden">
+            <div id="submitted-form">
+                <!-- Submitted application details will be injected here -->
+            </div>
+            <p>Status: <span id="application-status">Pending</span></p>
+            <p>Feedback: <span id="admin-feedback">None</span></p>
+            <button id="apply-btn">Apply for Course Exemption</button>
+        </div>
+        <div id="apply-page" class="hidden">
+            <h2>Apply for Course Exemption</h2>
+            <form id="exemption-form">
+                <div class="form-group">
+                    <label for="course-duration">Course Duration (in weeks)</label>
+                    <input type="number" id="course-duration" name="course-duration" required>
+                </div>
+                <div class="form-group">
+                    <label for="reward-points">Claimed Reward Points (Yes/No)</label>
+                    <input type="text" id="reward-points" name="reward-points" required>
+                </div>
+                <div class="form-group">
+                    <label for="course-relevance">Relevant to Current Course (Yes/No)</label>
+                    <input type="text" id="course-relevance" name="course-relevance" required>
+                </div>
+                <div class="form-group">
+                    <label for="academic-year">Academic Year</label>
+                    <input type="text" id="academic-year" name="academic-year" required>
+                </div>
+                <div class="form-group">
+                    <label for="semester">Semester</label>
+                    <input type="text" id="semester" name="semester" required>
+                </div>
+                <div class="form-group">
+                    <label for="nptel-course-title">NPTEL Course Title</label>
+                    <input type="text" id="nptel-course-title" name="nptel-course-title" required>
+                </div>
+                <div class="form-group">
+                    <label for="title-course-to-exempt">Title of the Course to Exempt</label>
+                    <input type="text" id="title-course-to-exempt" name="title-course-to-exempt" required>
+                </div>
+                <div class="form-group">
+                    <label for="certificate">Upload Certificate</label>
+                    <input type="file" id="certificate" name="certificate" required>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="container hidden" id="admin-interface">
+        <h1>Admin Interface</h1>
+        <div id="admin-applications">
+            <!-- Admin applications will be injected here -->
+        </div>
+    </div>
+
+    <script src="home.js"></script>
+</body>
+</html>
